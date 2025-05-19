@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Jura';
+    src: url(./font/JuraMedium.ttf);
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter_24pt-SemiBold.ttf);
+}
+
+body {
+    background-image: url(../img/fndoinicio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.control {
+    width: 300%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body {
+    background-color: #111;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.login-container {
+    padding: 0px 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+}
+
+.login-container input {
+    width: 15%;
+    height: 1.3vw;
+    padding: 12px;
+    border: 1px solid #9a3320;
+    border-radius: 0.3vw;
+    background-color: #222;
+    color: #ddd;
+    font-size: 1vw;
+    margin: 0.4vw 0;
+    padding: 0.22vw;
+    font-family: 'Jura', sans-serif;
+    position: relative;
+    bottom: 3vw; 
+}
+
+.login-container input::placeholder {
+    color: #666;
+}
+
+.container {
+    margin-top: 1vw;
+}
+
+.tabs {
+    display: flex;
+    position: relative;
+    background-color: #1E2122;
+    box-shadow:
+        0 0 1px 0 rgba(224, 24, 24, 0.15),
+        0 6px 12px 0 rgba(255, 47, 57, 0.15);
+    padding: 0.25rem;
+    border-radius: 10px;
+    width: 7.5vw;
+    height: 2vh;
+    margin: 0 auto;
+    bottom: 3vw;
+}
+
+.tabs * {
+    z-index: 2;
+}
+
+.container input[type="radio"] {
+    display: none;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    font-size: 0.7vw;
+    font-family: 'Jura', sans-serif;
+    color: rgb(79, 79, 79);
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: color 0.15s ease-in;
+    
+}
+
+.container input[type="radio"]:checked+label {
+    color: #ffffff;
+}
+
+.container input[id="radio-1"]:checked~.glider {
+    transform: translateX(0);
+}
+
+.container input[id="radio-2"]:checked~.glider {
+    transform: translateX(100%);
+}
+
+.glider {
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background-color: #4B1A1B;
+    z-index: 1;
+    border-radius: 8px;
+    transition: 0.15s ease-out;
+    top: 10%;
+}
