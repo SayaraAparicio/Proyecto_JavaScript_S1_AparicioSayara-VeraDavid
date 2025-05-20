@@ -2,6 +2,10 @@
     font-family: 'Jura';
     src: url(./font/JuraMedium.ttf);
 }
+@font-face {
+    font-family: 'JURABOLD';
+    src: url(./font/JuraDemiBold.ttf);
+}
 
 @font-face {
     font-family: 'Inter';
@@ -16,8 +20,8 @@ body {
 }
 
 .control {
-    width: 300%;
-    position: relative;
+    width: 50%;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -30,6 +34,19 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+h1 {
+
+    font-family: 'Jura';
+    font-weight: 600;
+    color: white;
+    position: relative;
+    font-size: 1.3vw;
+    left: -46%;
+    margin-top: -35%;
+    z-index: 10;
+
 }
 
 form {
@@ -57,7 +74,7 @@ form {
 }
 
 .login-container input {
-    width: 15%;
+    width: 13%;
     height: 1.3vw;
     padding: 12px;
     border: 1px solid #9a3320;
@@ -69,15 +86,20 @@ form {
     padding: 0.22vw;
     font-family: 'Jura', sans-serif;
     position: relative;
-    bottom: 3vw; 
+    bottom: 3vw;
 }
 
 .login-container input::placeholder {
     color: #666;
 }
+#login{
+    position: relative;
+    left: 0%;
+    margin-bottom: 10%;
+}
 
 .container {
-    margin-top: 1vw;
+    margin-top: -0.7vw;
 }
 
 .tabs {
@@ -92,7 +114,7 @@ form {
     width: 7.5vw;
     height: 2vh;
     margin: 0 auto;
-    bottom: 3vw;
+    bottom: 2vw;
 }
 
 .tabs * {
@@ -116,7 +138,7 @@ form {
     border-radius: 99px;
     cursor: pointer;
     transition: color 0.15s ease-in;
-    
+
 }
 
 .container input[type="radio"]:checked+label {
@@ -140,4 +162,37 @@ form {
     border-radius: 8px;
     transition: 0.15s ease-out;
     top: 10%;
+}
+
+button {
+    padding: 1.3em 3em;
+    font-size: 0.6vw;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    color: #000;
+    background-color: #4B1A1B;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-family: 'Jura';
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+    width: 150%;
+    position: relative;
+    left: -25%;
+}
+
+button:hover {
+    background-color: #49090a;
+    box-shadow: 0px 15px 20px rgba(46, 119, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+button:active {
+    transform: translateY(-1px);
 }
