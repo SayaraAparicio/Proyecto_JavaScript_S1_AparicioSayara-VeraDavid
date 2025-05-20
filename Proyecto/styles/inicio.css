@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    background: url(../img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: black;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 300px;
+    height: 250px;
+  }
+  
+  .icon-cards__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+  }
+  
+  .icon-cards__item {
+    position: absolute;
+    width: 190px;
+    height: 210px;
+    background: white;
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .icon-cards__item:nth-child(1) { transform: rotateY(0deg) translateZ(300px); }
+  .icon-cards__item:nth-child(2) { transform: rotateY(90deg) translateZ(300px); }
+  .icon-cards__item:nth-child(3) { transform: rotateY(180deg) translateZ(300px); }
+  .icon-cards__item:nth-child(4) { transform: rotateY(270deg) translateZ(300px); }
+  
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 5px 12px;
+    border-radius: 50%;
+    transition: background 0.3s;
+  }
+  
+  .nav:hover {
+    background: white;
+  }
+  
+  .prev { left: -50px; }
+  .next { right: -50px; }
+  
