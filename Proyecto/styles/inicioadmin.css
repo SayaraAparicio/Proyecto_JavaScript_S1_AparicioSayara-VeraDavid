@@ -1,0 +1,1014 @@
+@font-face {
+    font-family: 'Inter Medio';
+    src: url(./font/Inter_24pt-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'Jura';
+    src: url(./font/JuraDemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter_18pt-ExtraBold.ttf);
+  }
+  
+  body {
+    background-image: url('../img/fondo.png');
+    background-size: 120% auto; 
+    background-position: 30% 50%; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  
+  header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+  #f1logo{
+    box-shadow: none;
+  }
+  .boton {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 30px;
+    display: inline-block;
+    color: black;
+    text-decoration: none; /* elimina el subrayado */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    border: none;
+    background: none;
+  }
+  button {
+    all: unset;               
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin: 0 30px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .boton:hover {
+    transform: translateY(-2px);
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  header img {
+    height: 30px;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links h1 {
+    font-size: 14px;
+  }
+  
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: red;
+  }
+  
+  
+  .header-container img {
+    height: 20px;
+  }
+  
+  
+  .header-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .header-container button:hover {
+    background-color: red;
+  }
+  
+  .header-container button img {
+    height: 20px;
+  }
+  
+  section {
+    color: black;
+  }
+  informacion {
+    position: relative; 
+    margin: 40px auto;
+    padding: 40px;
+    color: #333; 
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .informacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 400%;
+    margin-top: 10%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+    z-index: -1; 
+  }
+  
+  .informacion h2, 
+  .informacion h3 {
+    color: #e10600; /* Rojo F1 para títulos */
+    margin-bottom: 20px;
+  }
+  
+  .informacion p, 
+  .informacion li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .informacion ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  p{
+    font-family: 'Inter Medio';
+    font-size: 1em;
+    margin-left: 10%;
+  }
+  h1{
+    font-family: 'Inter';
+    font-size: 1.6em;
+    text-align: center;
+    color: #ffffff; /* Rojo F1 */
+  }
+  h2{
+    position: relative;
+    left: 9%;
+    margin-top: 7%;
+  }
+  .img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 14%;
+    
+  }
+  img{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  #video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 14%;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(2, 100px);
+    grid-template-areas: "a b" "c b";
+    gap: 20%;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+  
+  .red {
+    background-color: #e4e4e4;
+    grid-area: a;
+    margin-bottom: 50%;
+    box-shadow: 0 0px 20px rgb(130, 130, 130);
+  }
+  
+  .blue {
+    background-color: #e4e4e4;
+    grid-area: b;
+    margin-bottom: 50%;
+    box-shadow: 0 0px 20px rgb(130, 130, 130);
+  }
+  
+  .green {
+    background-color: #e4e4e4;
+    grid-area: c;
+    margin-top: 80%;
+    width: 100%;
+    box-shadow: 0 0px 20px rgb(130, 130, 130);
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 200%;
+    width: 200%;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  .t1{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin-left: -10%;
+    border-radius: 10px;
+  }
+  .cards .card img.notice1 {
+    width: 100%;
+    align-items: center;
+    margin-left: -10%;
+    border-radius: 10px;
+  
+  }
+  
+  .cards .card p.second-text {
+    font-size: 1em;
+    margin-left: -2%;
+    font-weight: 400;
+    font-style: bold;
+    font-family: 'Jura';
+    color: black;
+  }
+  .thirdtext {
+    font-size: 1em;
+    margin-left: -2%;
+    font-weight: 400;
+    font-style: bold;
+    font-family: 'Jura';
+    color: black;
+  }
+  .cards .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px #4444;
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(4px);
+    transform: scale(0.9, 0.9);
+  }
+  
+  /* Estilos para la imagen de perfil */
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para la tarjeta */
+  .cardprofile {
+    width: 190px;
+    height: 254px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 1002;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 50px rgba(35, 35, 35, 0.2);
+    border-radius: 10px;
+  }
+  
+  .card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+    height: 100%;
+  }
+  
+  /* Estilos para la imagen de perfil */
+  .profile-trigger {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    object-fit: cover;
+  }
+  
+  .profile-trigger:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para la tarjeta de perfil */
+  .profile-card {
+    width: 220px;
+    height: 280px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: 1002;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .profile-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Avatar de la tarjeta */
+  .profile-avatar {
+    --size: 80px;
+    background: linear-gradient(135deg, #000000 0%, #ab0101 100%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Textos de la tarjeta */
+  .profile-name {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+  
+  .profile-role {
+    color: #859ba8;
+    font-size: 0.85em;
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+  
+  /* Estilos para el botón */
+  .profile-btn {
+    --bg: #c00d00;
+    --text-color: #fff;
+    position: relative;
+    width: 100%;
+    max-width: 160px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 0.8em 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 0 #a80a0a, 0 6px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-top: auto;
+    font-size: 0.8em;
+    margin-left: -10%;
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .profile-btn:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #903636, 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-btn:active {
+    top: 3px;
+    transform: translateY(0);
+    box-shadow: 0 2px 0 #e71902, 0 3px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Overlay de fondo */
+  .profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(3px);
+  }
+  
+  .profile-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .profile-card.active:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .profile-card.active:hover .profile-card-info {
+    transform: translateY(-5px);
+  }
+  
+  .profile-card.active .profile-avatar:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Media Queries para la página de inicio */
+  
+  /* Tablets (orientación horizontal y vertical) */
+  @media screen and (max-width: 1024px) {
+    body {
+        background-size: 150% auto;
+        background-position: 40% 30%;
+    }
+    
+    header {
+        padding: 10px 20px;
+    }
+    
+    .boton {
+        margin: 0 15px;
+        font-size: 14px;
+    }
+    
+    button {
+        margin: 0 15px;
+    }
+    
+    .informacion::before {
+        width: 95%;
+        left: 2.5%;
+        height: 430%;
+    }
+    
+    p {
+        font-size: 0.9em;
+    }
+    
+    h1 {
+        font-size: 1.4em;
+        color: red;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+        margin-top: 10%;
+    }
+    
+    .img {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 90px);
+        gap: 15%;
+        margin-left: 25%;
+    }
+    
+    .profile-card {
+        width: 200px;
+        height: 260px;
+    }
+    
+    .profile-avatar {
+        --size: 70px;
+    }
+    
+    .profile-name {
+        font-size: 1.3em;
+    }
+    
+    .profile-btn {
+        max-width: 140px;
+    }
+  }
+  
+  /* Smartphones (orientación horizontal) */
+  @media screen and (max-width: 767px) {
+    body {
+        background-size: 250% auto;
+        background-position: 45% 20%;
+    }
+    
+    header {
+        padding: 8px 10px;
+        flex-direction: column;
+    }
+    
+    #f1logo {
+        height: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .boton {
+        margin: 5px 8px;
+        font-size: 12px;
+    }
+    
+    button {
+        margin: 5px 8px;
+        font-size: 16px;
+    }
+    
+    .profile-trigger {
+        position: absolute;
+        top: 8px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .informacion::before {
+        height: 450%;
+        margin-top: 20%;
+    }
+    
+    p {
+        font-size: 0.8em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    h1 {
+        font-size: 1.2em;
+        margin-top: 15%;
+        color: red;
+    }
+    
+    h2 {
+        font-size: 1.1em;
+        left: 5%;
+        margin-top: 12%;
+    }
+    
+    .img {
+        max-width: 90%;
+        margin-left: 5%;
+    }
+    
+    #video {
+        margin-left: 5%;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(1, 150px);
+        grid-template-areas: 
+            "a"
+            "b"
+            "c";
+        gap: 10px;
+        margin-left: 25%;
+        margin-top: 15%;
+    }
+    
+    .card {
+        width: 150%;
+        height: 150%;
+    }
+    
+    .blue {
+        margin-bottom: 0;
+        margin-top: 30%;
+    }
+    
+    .green {
+        margin-top: 30%;
+    }
+    
+    .cards .card p.second-text, 
+    .thirdtext {
+        font-size: 0.8em;
+    }
+  }
+  
+  /* Smartphones pequeños (orientación vertical) */
+  @media screen and (max-width: 480px) {
+    body {
+        background-size: 300% auto;
+        background-position: 48% 10%;
+    }
+    
+    header {
+        padding: 5px;
+    }
+    
+    #f1logo {
+        height: 20px;
+    }
+    
+    .boton {
+        margin: 3px 5px;
+        font-size: 10px;
+    }
+    
+    button {
+        margin: 3px 5px;
+        font-size: 14px;
+    }
+    
+    .informacion::before {
+        width: 98%;
+        left: 1%;
+        height: 480%;
+        margin-top: 25%;
+    }
+    
+    p {
+        font-size: 0.75em;
+    }
+    
+    h1 {
+        font-size: 1em;
+        margin-top: 20%;
+        color: red;
+    }
+    
+    h2 {
+        font-size: 0.9em;
+        margin-top: 15%;
+    }
+    
+    .cards {
+        margin-left: 20%;
+    }
+    
+    .profile-card {
+        width: 180px;
+        height: 240px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .profile-avatar {
+        --size: 60px;
+    }
+    
+    .profile-name {
+        font-size: 1.1em;
+    }
+    
+    .profile-role {
+        font-size: 0.75em;
+    }
+    
+    .profile-btn {
+        max-width: 120px;
+        font-size: 0.7em;
+    }
+  }
+  
+  /* Específico para iPhone SE, 5, 5S, 5C (pantallas más pequeñas) */
+  @media screen and (max-width: 375px) and (max-height: 667px) {
+    body {
+        background-size: 350% auto;
+        background-position: 48% 5%;
+    }
+    
+    .menu {
+        padding: 0;
+    }
+    
+    .boton {
+        font-size: 9px;
+        margin: 2px 3px;
+    }
+    
+    button {
+        font-size: 12px;
+        margin: 2px 3px;
+    }
+    
+    .informacion h1 {
+        margin-top: 25%;
+    }
+    
+    .informacion::before {
+        height: 500%;
+        margin-top: 30%;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(1, 130px);
+        margin-left: 15%;
+    }
+    
+    .card {
+        width: 140%;
+        height: 140%;
+    }
+    
+    .cards .card p.second-text, 
+    .thirdtext {
+        font-size: 0.7em;
+    }
+    
+    .profile-trigger {
+        width: 35px;
+        height: 35px;
+    }
+  }
+  
+  /* Específico para iPhone 6, 7, 8, X, XS, 11 Pro, 12 mini, 13 mini */
+  @media screen and (min-width: 375px) and (max-width: 390px) and (min-height: 667px) {
+    body {
+        background-size: 320% auto;
+        background-position: 48% 8%;
+    }
+    
+    .informacion::before {
+        height: 490%;
+        margin-top: 28%;
+    }
+    
+    .cards {
+        margin-left: 18%;
+    }
+    
+    .profile-card {
+        width: 190px;
+    }
+  }
+  
+  /* Específico para iPhone 6+, 7+, 8+, XR, XS Max, 11, 11 Pro Max */
+  @media screen and (min-width: 390px) and (max-width: 428px) and (min-height: 736px) {
+    body {
+        background-size: 300% auto;
+        background-position: 48% 12%;
+    }
+    
+    .informacion::before {
+        height: 480%;
+        margin-top: 25%;
+    }
+    
+    .boton {
+        font-size: 11px;
+    }
+    
+    .cards {
+        margin-left: 22%;
+    }
+    
+    p {
+        font-size: 0.8em;
+    }
+  }
+  
+  /* Específico para iPhone 12 Pro Max, 13 Pro Max, 14, 14 Pro, 14 Pro Max, 15, 15 Pro, 15 Pro Max */
+  @media screen and (min-width: 428px) and (max-width: 430px) and (min-height: 926px) {
+    body {
+        background-size: 280% auto;
+        background-position: 48% 15%;
+    }
+    
+    .informacion::before {
+        height: 460%;
+        margin-top: 22%;
+    }
+    
+    .boton {
+        font-size: 12px;
+        margin: 4px 6px;
+    }
+    
+    button {
+        font-size: 15px;
+        margin: 4px 6px;
+    }
+    
+    h1 {
+        font-size: 1.1em;
+        color: red;
+    }
+    
+    h2 {
+        font-size: 1em;
+    }
+    
+    p {
+        font-size: 0.85em;
+    }
+    
+    .cards {
+        margin-left: 22%;
+        grid-template-columns: repeat(1, 170px);
+    }
+    
+    .card {
+        width: 150%;
+        height: 150%;
+    }
+    
+    .profile-card {
+        width: 210px;
+        height: 260px;
+    }
+    
+    .profile-avatar {
+        --size: 65px;
+    }
+  }
+  
+  /* Modo Landscape (horizontal) para dispositivos móviles */
+  @media screen and (max-height: 480px) and (orientation: landscape) {
+    body {
+        background-size: 150% auto;
+        background-position: center 45%;
+    }
+    
+    header {
+        padding: 3px 5px;
+    }
+    
+    #f1logo {
+        height: 18px;
+    }
+    
+    .menu {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+    
+    .boton {
+        font-size: 9px;
+        margin: 0 3px;
+    }
+    
+    button {
+        font-size: 12px;
+        margin: 0 3px;
+    }
+    
+    .informacion::before {
+        margin-top: 12%;
+        height: 700%;
+    }
+    
+    h1 {
+        font-size: 0.9em;
+        margin-top: 10%;
+    }
+    
+    h2 {
+        font-size: 0.8em;
+        margin-top: 8%;
+    }
+    
+    p {
+        font-size: 0.7em;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    
+    .cards {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-areas: "a b c";
+        gap: 8%;
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+    
+    .card {
+        width: 120%;
+        height: 120%;
+    }
+    
+    .blue, .green {
+        margin: 0;
+    }
+    
+    .cards .card p.second-text, 
+    .thirdtext {
+        font-size: 0.6em;
+    }
+    
+    .profile-card {
+        transform: translate(-50%, -50%) scale(0.8);
+        width: 170px;
+        height: 220px;
+        padding: 1rem 0.8rem;
+    }
+    
+    .profile-card.active {
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    
+    .profile-avatar {
+        --size: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-name {
+        font-size: 1em;
+    }
+    
+    .profile-role {
+        font-size: 0.7em;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-btn {
+        max-width: 110px;
+        font-size: 0.6em;
+        padding: 0.6em 1em;
+    }
+  }
