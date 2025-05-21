@@ -1,23 +1,103 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>F1 Inicio</title>
-  <link rel="stylesheet" href="../styles/inicio.css">
-  <link rel="icon" type="image/x-icon" href="../img/icon2.png">
-</head>
-<body>
-  <div class="carousel-container">
-    <button class="nav prev">&#10094;</button>
-    <div class="icon-cards__content" id="carousel">
-      <div class="icon-cards__item"><img src="../img/pilotos 1.png" alt=""></div>
-      <div class="icon-cards__item"><img src="../img/f1_teams.png" alt=""></div>
-      <div class="icon-cards__item"><img src="../img/vehiculos.png" alt=""></div>
-      <div class="icon-cards__item">4</div>
-    </div>
-    <button class="nav next">&#10095;</button>
-  </div>
 
-  <script src="../scripts/inicio.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 </title>
+    <link rel="stylesheet" href="../styles/inicio.css">
+    <script src="../scripts/scriptcomplement/iniciouser.js" defer type="module"></script>
+    <link rel="icon" type="image/png" href="../img/icon2.png">
+</head>
+
+<body>
+    <header>
+        <img id="f1logo" src="../img/f1logo.png" alt="">
+        <section id="dashboard" class="dashboard">
+            <nav class="menu">
+                <button>
+                    <a class="boton" href="escuderias.html">Escuderías</a>
+                </button>
+                <button>
+                    <a class="boton" href="pilotos.html">Pilotos</a>
+                </button>
+                <button>
+                    <a class="boton" href="vehiculos.html">Vehículos</a>
+                </button>
+                <button>
+                    <a class="boton" href="circuitos.html">Circuitos</a>
+                </button>
+                <button>
+                    <a class="boton" href="simulation.html">Simulador</a>
+                </button>
+                <img src="https://img.freepik.com/vector-premium/ilustracion-plana-vectorial-escala-grises-icono-perfil-usuario-avatar-persona-imagen-perfil-silueta-genero-neutral-apto-perfiles-redes-sociales-iconos-protectores-pantalla-como-plantillax9xa_719432-2191.jpg?semt=ais_hybrid&w=740"
+                    alt="Perfil" class="profile-trigger">
+
+                <div class="profile-overlay"></div>
+
+                <div class="profile-card">
+                    <div class="profile-card-info">
+                        <div class="profile-avatar"></div>
+                        <div class="profile-name">Camper</div>
+                        <div class="profile-role">Your F1 Profile</div>
+                    </div>
+                    <a href="../index.html"><button class="profile-btn">Get out</button></a>
+                </div>
+               
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <section class="informacion">
+        <h1>Bienvenido, <br> ¿Qué deseas hacer hoy?</h1>
+        <h2>Fórmula 1</h2>
+        <p>No es solo un espectáculo de autos en movimiento; es una danza de precisión extrema donde la ciencia, la
+            táctica y la audacia se enfrentan <br>en un escenario de alta tensión.
+
+            En la Fórmula 1, el tiempo no se mide en minutos, sino en milésimas que definen leyendas. <br><br> Es
+            ingeniería al límite, una batalla silenciosa entre cerebros y máquinas diseñada para conquistar lo
+            imposible.
+        </p>
+        <h2>Conoce más</h2>
+        <a class="img"
+            href="https://www.formula1.com/en/latest/article/power-rankings-who-impressed-our-judges-during-an-incident-packed-weekend-at.5bPEMQur9j5BR2ESwcnsG7"><img
+                class="img"
+                src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1320/fom-website/2025/Power%20Rankings%202025/Power-Rankings-Hero-Image-16x9_25"
+                alt=""></a>
+
+        <h2>NEWS</h2>
+        <section class="f1-video">
+            <div class="video-container">
+                <a class="img" href="https://youtu.be/xkRXnrvFCY0?si=gkZNkf5vM8GlTJN3"><img id="video" class="img"
+                        src="../img/youtube.png" alt="">
+                </a>
+            </div>
+        </section>
+        <div class="cards">
+            <div class="card red">
+                <p class="tip"><img class="notice1"
+                        src="https://media.formula1.com/image/upload/f_auto,c_limit,w_630,q_auto/f_auto,c_fill,q_auto,w_420,g_faces,ar_16:9/fom-website/Unlocked2025/Onsite_Header_1920x1080"
+                        alt=""></p>
+                <p class="second-text">Win the ultimate GP experience!</p>
+            </div>
+            <div class="card blue">
+                <p class="tip"><img class="t1"
+                        src="https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/t_16by9North/f_auto/q_auto/trackside-images/2025/F1_Grand_Prix_of_Emilia_Romagna/2215747161"
+                        alt=""></p>
+                <p class="thirdtext">The rest was perfect, <br>
+                    Hadjar pinpoints the <br>one thing he needs to <br> work on after another points finish at Imola</p>
+            </div>
+            <div class="card green">
+                <p class="tip"><img class="t1"
+                        src="https://media.formula1.com/image/upload/f_auto,c_limit,w_960,q_auto/t_16by9South/f_auto/q_auto/fom-website/campaign/support-partner/Disney/DSC03771%202"
+                        alt=""></p>
+                <p class="second-text">Formula 1 and Disney collaboration in 2026</p>
+            </div>
+        </div>
+
+    </section>
+
 </body>
+
 </html>
