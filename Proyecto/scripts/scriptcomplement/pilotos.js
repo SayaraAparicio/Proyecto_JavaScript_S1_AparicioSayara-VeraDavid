@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const pilotosSection = document.querySelector('#pilotos .content-placeholder'); // Seleccionar el contenedor correcto
+    const searchInput = document.querySelector('.input'); // Seleccionar el campo de búsqueda
+    const API_PILOTOS = "https://682c82284fae18894752cd63.mockapi.io/Pilotos";
+
+    let pilotosData = []; // Variable para almacenar los datos de la API
 
     function cargarDatosPilotos() {
-        const API_PILOTOS = "https://682c82284fae18894752cd63.mockapi.io/Pilotos";
-
         // Mostrar indicador de carga
         pilotosSection.innerHTML = '<div class="loading">Cargando información de pilotos...</div>';
 
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(pilotos => {
+                pilotosData = pilotos; // Guardar los datos en la variable global
                 mostrarPilotos(pilotos);
             })
             .catch(error => {
@@ -57,6 +60,20 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    function buscarPilotos(term) {
+        const resultados = pilotosData.filter(piloto =>
+            piloto.nombre.toLowerCase().includes(term.toLowerCase()) ||
+            piloto.pais.toLowerCase().includes(term.toLowerCase())
+        );
+        mostrarPilotos(resultados);
+    }
+
+    // Evento para buscar cuando el usuario escribe en el campo de búsqueda
+    searchInput.addEventListener('input', function () {
+        const searchTerm = searchInput.value.trim();
+        buscarPilotos(searchTerm);
+    });
 
     // Llamar a la función para cargar los datos al cargar la página
     cargarDatosPilotos();

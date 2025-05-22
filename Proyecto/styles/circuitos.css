@@ -155,7 +155,7 @@
     top: 0;
     left: 5%;
     width: 90%;
-    height: 300%;
+    height: 490%;
     margin-bottom: 10%;
     margin-top: 7%;
     background-color: white;
@@ -460,3 +460,65 @@
   .profile-card.active .profile-avatar:hover {
     transform: scale(1.1);
   }
+
+  /* Contenedor para las filas */
+.content-placeholder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre las cartas */
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+/* Ajustar el tamaño de las cartas */
+.container {
+  flex: 0 1 calc(45% - 20px); /* Dos cartas por fila */
+  box-sizing: border-box;
+  max-width: 400px;
+  height: auto;
+}
+
+.card {
+  background-color: #fff;
+  border: 3px solid #E42B1E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Inter';
+  padding: 30px 20px;
+  color: #e23c30;
+  border-radius: 45px;
+  box-shadow: 0 8px 20px black;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  margin-left: 10%;
+}
+
+.circuit {
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.App-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #E42B1E;
+  font-family: 'Inter';
+  font-size: 15px;
+  border: 3px solid #E42B1E;
+  border-radius: 5em;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.App-button:hover {
+  color: #2e1513;
+  background-color: #E42B1E;
+}
