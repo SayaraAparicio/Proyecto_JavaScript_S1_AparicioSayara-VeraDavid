@@ -1,0 +1,606 @@
+@font-face {
+    font-family: 'Inter Medio';
+    src: url(./font/Inter_24pt-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'Jura';
+    src: url(./font/JuraDemiBold.ttf);
+  }
+  @font-face {
+    font-family: 'Inter';
+    src: url(./font/Inter_18pt-ExtraBold.ttf);
+  }
+  
+  body {
+    background-image: url('../img/fondo.png');
+    background-size: 120% auto; 
+    background-position: 30% 50%; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  
+  header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+  #f1logo{
+    box-shadow: none;
+  }
+  .boton {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 30px;
+    display: inline-block;
+    color: black;
+    text-decoration: none; /* elimina el subrayado */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    border: none;
+    background: none;
+  }
+  button {
+    all: unset;               
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin: 0 30px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .boton:hover {
+    transform: translateY(-2px);
+    color: red;
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  header img {
+    height: 30px;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-links h1 {
+    font-size: 14px;
+  }
+  
+  .nav-links a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: red;
+  }
+  
+  
+  .header-container img {
+    height: 20px;
+  }
+  
+  
+  .header-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .header-container button:hover {
+    background-color: red;
+  }
+  
+  .header-container button img {
+    height: 20px;
+  }
+  
+  section {
+    color: rgb(0, 0, 0);
+  }
+  informacion {
+    position: relative; 
+    margin: 40px auto;
+    padding: 40px;
+    color: #333; 
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .informacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 300%;
+    margin-bottom: 10%;
+    margin-top: 7%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);
+    z-index: -1; 
+  }
+  
+  .informacion h2, 
+  .informacion h3 {
+    color: #e10600; /* Rojo F1 para títulos */
+    margin-bottom: 20px;
+  }
+  
+  .informacion p, 
+  .informacion li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .informacion ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  p{
+    font-family: 'Inter Medio';
+    font-size: 1em;
+    margin-left: 10%;
+  }
+  h1{
+    font-family: 'Inter';
+    font-size: 1.6em;
+    text-align: center;
+    color: #ffffff; /* Rojo F1 */
+  }
+  h2{
+    position: relative;
+    left: 9%;
+    margin-top: 7%;
+  }
+  .img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 14%;
+    
+  }
+  img{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+   }
+   
+   .input {
+    width: 25%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    z-index: 10;
+    margin-left: 10%;
+    margin-top: 5%;
+   }
+   
+   .input::placeholder {
+    color: #9e9ea7;
+   }
+   
+   .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(234,76,137,0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+   }
+   
+   .icon {
+    position: absolute;
+    left: 11%;
+    margin-top: 6%;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+   }
+   
+   
+   
+   
+  
+  /* Estilos para la imagen de perfil */
+  .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .profile-img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para la tarjeta */
+  .cardprofile {
+    width: 190px;
+    height: 254px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 1002;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 50px rgba(35, 35, 35, 0.2);
+    border-radius: 10px;
+  }
+  
+  .card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease, opacity .2s ease;
+    height: 100%;
+  }
+  
+  /* Estilos para la imagen de perfil */
+  .profile-trigger {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    object-fit: cover;
+  }
+  
+  .profile-trigger:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para la tarjeta de perfil */
+  .profile-card {
+    width: 220px;
+    height: 280px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    z-index: 1002;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .profile-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Avatar de la tarjeta */
+  .profile-avatar {
+    --size: 80px;
+    background: linear-gradient(135deg, #000000 0%, #ab0101 100%);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Textos de la tarjeta */
+  .profile-name {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    text-align: center;
+  }
+  
+  .profile-role {
+    color: #859ba8;
+    font-size: 0.85em;
+    margin-bottom: 1.8rem;
+    text-align: center;
+  }
+  
+  /* Estilos para el botón */
+  .profile-btn {
+    --bg: #c00d00;
+    --text-color: #fff;
+    position: relative;
+    width: 100%;
+    max-width: 160px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 0.8em 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 0 #a80a0a, 0 6px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    margin-top: auto;
+    font-size: 0.8em;
+    margin-left: -10%;
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+  .profile-btn:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 0 #903636, 0 8px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-btn:active {
+    top: 3px;
+    transform: translateY(0);
+    box-shadow: 0 2px 0 #e71902, 0 3px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Overlay de fondo */
+  .profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(3px);
+  }
+  
+  .profile-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .profile-card.active:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .profile-card.active:hover .profile-card-info {
+    transform: translateY(-5px);
+  }
+  
+  .profile-card.active .profile-avatar:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Estilos para las tarjetas de escuderías */
+.equipo-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.equipo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.equipo-logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.equipo-nombre {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    color: #e10600; /* Rojo F1 */
+    margin-bottom: 10px;
+}
+
+.equipo-pais,
+.equipo-fundacion,
+.equipo-descripcion {
+    font-family: 'Inter Medio', sans-serif;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de filas */
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las tarjetas */
+.card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: #f2f2f2;
+    border: 5px solid white; /* Borde blanco */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra negra */
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin: 10px;
+}
+
+.card img {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Sombra más fuerte al hacer hover */
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 700;
+}
+
+.card:hover svg {
+    scale: 0;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.4;
+}
+.ADDboton{
+    background-color: #e10600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-left: 40%;
+}
+.ADDboton:hover {
+    color: black; 
+    /* Cambia el color de la letra a blanco */
+    background-color: #920000;
+}
+.add_boton:hover{
+  color: black;
+}

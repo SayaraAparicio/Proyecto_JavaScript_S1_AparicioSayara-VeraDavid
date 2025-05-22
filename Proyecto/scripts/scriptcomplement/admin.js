@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
             if (usuarioIngresado === usuarioGuardado && passwordIngresado === passwordGuardado) {
                 login.innerHTML = `
                     <div style="display: flex; justify-content: center; align-items: center;">
-                        <a href="../docs/userweb.html" style="display: inline-block; padding: 10px 20px; background-color: green; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                        <a href="" style="display: inline-block; padding: 10px 20px; background-color: green; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">
                             Entrar
                         </a>
                     </div>
