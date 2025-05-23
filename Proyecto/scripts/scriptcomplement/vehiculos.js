@@ -80,13 +80,30 @@ document.addEventListener('DOMContentLoaded', function () {
                         <img class="carimg" src="${vehiculo.imagen}" alt="${vehiculo.nombre}">
                         <p class="heading">${vehiculo.nombre}</p>
                         <p class="follow"><strong>Motor:</strong> ${vehiculo.motor}</p>
+                        <p class="follow"><strong>Velocidad Máxima:</strong> ${vehiculo.velocidad}</p>
                     </div>
                     <div class="back">
-                        <p class="heading">Detalles</p>
-                        <p class="follow"><strong>Modelo:</strong> ${vehiculo.modelo}</p>
-                        <p class="follow"><strong>Motor:</strong> ${vehiculo.motor}</p>
-                    </div>
-                </div>
+                        <p class="detalles">Detalles</p>
+                        <p class="follow"><strong>Aceleración:</strong> ${vehiculo.aceleración}</p>
+                          <div class="conduccion-row">
+    <div class="conduccion-col">
+        <p class="follow"><strong>Conducción normal:</strong></p>
+        <ul>
+            <li class="lista">Velocidad promedio: ${vehiculo.conduccion_normal.velocidad_promedio}</li>
+            <li class="lista">Combustible: ${vehiculo.conduccion_normal.combustible_seco}</li>
+            <li class="lista">Neumáticos: ${vehiculo.conduccion_normal.neumaticos_seco}</li>
+        </ul>
+    </div>
+
+    <div class="conduccion-col">
+        <p class="follow"><strong>Conducción agresiva:</strong></p>
+        <ul>
+            <li class="lista">Velocidad promedio: ${vehiculo.conduccion_agresiva.velocidad_promedio}</li>
+            <li class="lista">Combustible: ${vehiculo.conduccion_agresiva.combustible_seco}</li>
+            <li class="lista">Neumáticos: ${vehiculo.conduccion_agresiva.neumaticos_seco}</li>
+        </ul>
+    </div>
+</div>
             `;
 
             vehiculosSection.appendChild(vehiculoContainer);

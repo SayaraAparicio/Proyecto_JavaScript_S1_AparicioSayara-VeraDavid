@@ -1,0 +1,27 @@
+:root {
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-rojo: #FB0000;
+    --color-rojo-jm: #f01b1b;
+    --color-rojo-oscuro: #9d0606;
+    --color-gris-oscuro: #e7e7e7;
+    --color-amarillo: #FFD700;
+    --color-plateado: #C0C0C0;
+    --color-azul-oscuro: #001F3F;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay-Black1";
+    src: url("../storage/font/Playfair_Display/static/PlayfairDisplay-Black.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../storage/font/Poppins/Poppins-Bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

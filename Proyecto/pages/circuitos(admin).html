@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| Formula 1 |</title>
-    <link rel="stylesheet" href="../styles/circuitos.css">
-    <script src="../scripts/scriptcomplement/circuitos.js" defer type="module"></script>
+    <link rel="stylesheet" href="../styles/circuitos(admin).css">
+    <script src="../scripts/scriptcomplement/circuitos(admin).js" defer type="module"></script>
     <link rel="icon" type="image/png" href="../img/icon2.png">
 </head>
 
@@ -16,19 +16,19 @@
         <section id="dashboard" class="dashboard">
             <nav class="menu">
                 <button>
-                    <a class="boton" href="escuderias.html">Escuderías</a>
+                    <a class="boton" href="escuderias(admin).html">Escuderías</a>
                 </button>
                 <button>
-                    <a class="boton" href="pilotos.html">Pilotos</a>
+                    <a class="boton" href="pilotos(admin).html">Pilotos</a>
                 </button>
                 <button>
-                    <a class="boton" href="vehiculos.html">Vehículos</a>
+                    <a class="boton" href="vehiculos(admin).html">Vehículos</a>
                 </button>
                 <button>
-                    <a class="boton" href="circuitos.html">Circuitos</a>
+                    <a class="boton" href="circuitos(admin).html">Circuitos</a>
                 </button>
                 <button>
-                    <a class="boton" href="simulation.html">Simulador</a>
+                    <a class="boton" href="simulation(admin).html">Simulador</a>
                 </button>
                 <img src="https://img.freepik.com/vector-premium/ilustracion-plana-vectorial-escala-grises-icono-perfil-usuario-avatar-persona-imagen-perfil-silueta-genero-neutral-apto-perfiles-redes-sociales-iconos-protectores-pantalla-como-plantillax9xa_719432-2191.jpg?semt=ais_hybrid&w=740"
                     alt="Perfil" class="profile-trigger">
@@ -38,7 +38,7 @@
                 <div class="profile-card">
                     <div class="profile-card-info">
                         <div class="profile-avatar"></div>
-                        <div class="profile-name">Camper</div>
+                        <div class="profile-name">Admin</div>
                         <div class="profile-role">Your F1 Profile</div>
                     </div>
                     <a href="./inicio.html"><button class="profile-btn">Log out</button></a>
@@ -57,8 +57,17 @@
                 </g>
             </svg>
             <input placeholder="Search" type="search" class="input">
+            <div class="dropdown">
+                <button class="dropdown-button">Información</button>
+                <div class="dropdown-content">
+                    <a href="#" id="add-option">Agregar</a> <!-- Identificador para la opción "Agregar" -->
+                    <a href="#">Editar</a>
+                </div>
+            </div>
+            <div id="form-container" style="display: none;"></div> <!-- Contenedor para el formulario -->
         </div>
     </section>
+
     
     <section class="informacion">
         <div class="section-header">

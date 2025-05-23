@@ -82,7 +82,17 @@
   header img {
     height: 30px;
   }
-  
+  .teams {
+    margin-left: 35%;
+  }
+  .pilots {
+    margin-left: 32%;
+  }
+  .carrito {
+    width: 40%;
+    margin-left: 30%;
+    border-radius: 10px;
+  }
   .header-container {
     display: flex;
     align-items: center;
@@ -161,7 +171,7 @@
     top: 0;
     left: 5%;
     width: 90%;
-    height: 400%;
+    height: 2000%;
     margin-top: 10%;
     background-color: white;
     border-radius: 15px;
@@ -1018,3 +1028,705 @@
         padding: 0.6em 1em;
     }
   }
+
+  /* ============================================
+   MEDIA QUERIES OPTIMIZADOS - FORMULA 1
+   ============================================ */
+
+/* DESKTOP GRANDE (1200px+) - Valores base ya definidos */
+
+/* DESKTOP MEDIO (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background-size: 130% auto;
+    background-position: 35% 45%;
+  }
+  
+  header {
+    padding: 10px 30px;
+  }
+  
+  .boton {
+    margin: 0 20px;
+    font-size: 14px;
+  }
+  
+  .informacion::before {
+    width: 92%;
+    left: 4%;
+  }
+}
+
+/* TABLET HORIZONTAL (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-size: 150% auto;
+    background-position: 40% 35%;
+  }
+  
+  header {
+    padding: 10px 20px;
+  }
+  
+  .boton {
+    margin: 0 12px;
+    font-size: 13px;
+  }
+  
+  button {
+    margin: 0 12px;
+    font-size: 18px;
+  }
+  
+  .informacion::before {
+    width: 95%;
+    left: 2.5%;
+    height: 450%;
+    margin-top: 12%;
+  }
+  
+  p {
+    font-size: 0.9em;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  
+  h1 {
+    font-size: 1.4em;
+    color: #e10600;
+    margin-top: 8%;
+  }
+  
+  h2 {
+    font-size: 1.3em;
+    margin-top: 8%;
+    left: 8%;
+  }
+  
+  .img {
+    max-width: 65%;
+    margin-left: 17.5%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 110px);
+    grid-template-rows: repeat(2, 95px);
+    gap: 18%;
+    margin-left: 28%;
+  }
+  
+  .profile-card {
+    width: 200px;
+    height: 260px;
+  }
+  
+  .profile-avatar {
+    --size: 70px;
+  }
+}
+
+/* TABLET VERTICAL Y MÓVIL HORIZONTAL GRANDE (576px - 767px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    background-size: 200% auto;
+    background-position: 45% 25%;
+  }
+  
+  header {
+    padding: 8px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #f1logo {
+    height: 28px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .boton {
+    margin: 4px 8px;
+    font-size: 12px;
+  }
+  
+  button {
+    margin: 4px 8px;
+    font-size: 16px;
+  }
+  
+  .profile-trigger {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .informacion::before {
+    width: 96%;
+    left: 2%;
+    height: 470%;
+    margin-top: 18%;
+  }
+  
+  p {
+    font-size: 0.85em;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  
+  h1 {
+    font-size: 1.3em;
+    color: #e10600;
+    margin-top: 12%;
+  }
+  
+  h2 {
+    font-size: 1.2em;
+    left: 6%;
+    margin-top: 10%;
+  }
+  
+  .img {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+  
+  #video {
+    margin-left: 10%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: repeat(2, 110px);
+    gap: 15%;
+    margin-left: 20%;
+    margin-top: 12%;
+  }
+  
+  .card {
+    width: 160%;
+    height: 160%;
+  }
+  
+  .profile-card {
+    width: 190px;
+    height: 250px;
+  }
+}
+
+/* MÓVIL GRANDE (480px - 575px) */
+@media screen and (min-width: 480px) and (max-width: 575px) {
+  body {
+    background-size: 250% auto;
+    background-position: 47% 20%;
+  }
+  
+  header {
+    padding: 8px 10px;
+    flex-direction: column;
+  }
+  
+  #f1logo {
+    height: 25px;
+    margin-bottom: 8px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .boton {
+    margin: 3px 6px;
+    font-size: 11px;
+  }
+  
+  button {
+    margin: 3px 6px;
+    font-size: 15px;
+  }
+  
+  .profile-trigger {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .informacion::before {
+    width: 98%;
+    left: 1%;
+    height: 480%;
+    margin-top: 22%;
+  }
+  
+  p {
+    font-size: 0.8em;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  h1 {
+    font-size: 1.2em;
+    color: #e10600;
+    margin-top: 18%;
+  }
+  
+  h2 {
+    font-size: 1.1em;
+    left: 4%;
+    margin-top: 12%;
+  }
+  
+  .img {
+    max-width: 90%;
+    margin-left: 5%;
+  }
+  
+  #video {
+    margin-left: 5%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(1, 150px);
+    grid-template-areas: 
+      "a"
+      "b" 
+      "c";
+    gap: 15px;
+    margin-left: 25%;
+    margin-top: 15%;
+  }
+  
+  .card {
+    width: 150%;
+    height: 150%;
+  }
+  
+  .blue, .green {
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  
+  .cards .card p.second-text, 
+  .thirdtext {
+    font-size: 0.85em;
+  }
+  
+  .profile-card {
+    width: 180px;
+    height: 240px;
+    padding: 1.5rem 1.2rem;
+  }
+  
+  .profile-avatar {
+    --size: 65px;
+  }
+  
+  .profile-name {
+    font-size: 1.2em;
+  }
+}
+
+/* MÓVIL MEDIO (375px - 479px) */
+@media screen and (min-width: 375px) and (max-width: 479px) {
+  body {
+    background-size: 280% auto;
+    background-position: 48% 15%;
+  }
+  
+  header {
+    padding: 6px 8px;
+    flex-direction: column;
+  }
+  
+  #f1logo {
+    height: 22px;
+  }
+  
+  .boton {
+    margin: 2px 4px;
+    font-size: 10px;
+  }
+  
+  button {
+    margin: 2px 4px;
+    font-size: 14px;
+  }
+  
+  .profile-trigger {
+    width: 38px;
+    height: 38px;
+    top: 6px;
+    right: 8px;
+  }
+  
+  .informacion::before {
+    width: 98%;
+    left: 1%;
+    height: 500%;
+    margin-top: 25%;
+  }
+  
+  p {
+    font-size: 0.75em;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+  h1 {
+    font-size: 1.1em;
+    color: #e10600;
+    margin-top: 20%;
+  }
+  
+  h2 {
+    font-size: 1em;
+    left: 3%;
+    margin-top: 15%;
+  }
+  
+  .img {
+    max-width: 92%;
+    margin-left: 4%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(1, 140px);
+    grid-template-areas: 
+      "a"
+      "b" 
+      "c";
+    gap: 12px;
+    margin-left: 20%;
+  }
+  
+  .card {
+    width: 140%;
+    height: 140%;
+  }
+  
+  .cards .card p.second-text, 
+  .thirdtext {
+    font-size: 0.75em;
+  }
+  
+  .profile-card {
+    width: 170px;
+    height: 230px;
+    padding: 1.2rem 1rem;
+  }
+  
+  .profile-avatar {
+    --size: 60px;
+  }
+  
+  .profile-name {
+    font-size: 1.1em;
+  }
+  
+  .profile-role {
+    font-size: 0.75em;
+  }
+  
+  .profile-btn {
+    max-width: 130px;
+    font-size: 0.75em;
+  }
+}
+
+/* MÓVIL PEQUEÑO (menos de 375px) */
+@media screen and (max-width: 374px) {
+  body {
+    background-size: 320% auto;
+    background-position: 48% 10%;
+  }
+  
+  header {
+    padding: 5px;
+    flex-direction: column;
+  }
+  
+  #f1logo {
+    height: 20px;
+  }
+  
+  .boton {
+    margin: 1px 2px;
+    font-size: 9px;
+  }
+  
+  button {
+    margin: 1px 2px;
+    font-size: 12px;
+  }
+  
+  .profile-trigger {
+    width: 35px;
+    height: 35px;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .informacion::before {
+    width: 99%;
+    left: 0.5%;
+    height: 520%;
+    margin-top: 28%;
+  }
+  
+  p {
+    font-size: 0.7em;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  h1 {
+    font-size: 1em;
+    color: #e10600;
+    margin-top: 25%;
+  }
+  
+  h2 {
+    font-size: 0.9em;
+    left: 2%;
+    margin-top: 18%;
+  }
+  
+  .img {
+    max-width: 95%;
+    margin-left: 2.5%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(1, 120px);
+    margin-left: 15%;
+  }
+  
+  .card {
+    width: 130%;
+    height: 130%;
+  }
+  
+  .cards .card p.second-text, 
+  .thirdtext {
+    font-size: 0.7em;
+  }
+  
+  .profile-card {
+    width: 160px;
+    height: 220px;
+    padding: 1rem 0.8rem;
+  }
+  
+  .profile-avatar {
+    --size: 55px;
+  }
+  
+  .profile-name {
+    font-size: 1em;
+  }
+  
+  .profile-role {
+    font-size: 0.7em;
+  }
+  
+  .profile-btn {
+    max-width: 120px;
+    font-size: 0.7em;
+  }
+}
+
+/* MODO LANDSCAPE (HORIZONTAL) PARA MÓVILES */
+@media screen and (max-height: 500px) and (orientation: landscape) and (max-width: 926px) {
+  body {
+    background-size: 180% auto;
+    background-position: center 40%;
+  }
+  
+  header {
+    padding: 3px 8px;
+  }
+  
+  #f1logo {
+    height: 18px;
+  }
+  
+  .menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+  
+  .boton {
+    font-size: 9px;
+    margin: 0 4px;
+    white-space: nowrap;
+  }
+  
+  button {
+    font-size: 12px;
+    margin: 0 4px;
+  }
+  
+  .profile-trigger {
+    width: 32px;
+    height: 32px;
+    top: 3px;
+    right: 8px;
+  }
+  
+  .informacion::before {
+    margin-top: 8%;
+    height: 600%;
+    width: 96%;
+    left: 2%;
+  }
+  
+  h1 {
+    font-size: 0.95em;
+    margin-top: 6%;
+    color: #e10600;
+  }
+  
+  h2 {
+    font-size: 0.85em;
+    margin-top: 5%;
+    left: 3%;
+  }
+  
+  p {
+    font-size: 0.7em;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  
+  .img {
+    max-width: 70%;
+    margin-left: 15%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(3, 90px);
+    grid-template-areas: "a b c";
+    gap: 8%;
+    margin-left: 15%;
+    margin-top: 8%;
+  }
+  
+  .card {
+    width: 120%;
+    height: 120%;
+  }
+  
+  .blue, .green {
+    margin: 0;
+  }
+  
+  .red {
+    margin-bottom: 0;
+  }
+  
+  .cards .card p.second-text, 
+  .thirdtext {
+    font-size: 0.65em;
+  }
+  
+  .profile-card {
+    transform: translate(-50%, -50%) scale(0.7);
+    width: 160px;
+    height: 200px;
+    padding: 1rem 0.8rem;
+  }
+  
+  .profile-card.active {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  
+  .profile-avatar {
+    --size: 45px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .profile-name {
+    font-size: 0.9em;
+  }
+  
+  .profile-role {
+    font-size: 0.65em;
+    margin-bottom: 0.8rem;
+  }
+  
+  .profile-btn {
+    max-width: 100px;
+    font-size: 0.6em;
+    padding: 0.5em 0.8em;
+  }
+}
+
+/* BREAKPOINTS ADICIONALES PARA DISPOSITIVOS ESPECÍFICOS */
+
+/* iPhone 12 Pro Max, 13 Pro Max, 14 Plus, etc. */
+@media screen and (min-width: 428px) and (max-width: 430px) and (min-height: 926px) {
+  body {
+    background-size: 260% auto;
+    background-position: 48% 18%;
+  }
+  
+  .informacion::before {
+    height: 460%;
+    margin-top: 20%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(1, 160px);
+    margin-left: 23%;
+  }
+}
+
+/* iPad y tablets grandes */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  body {
+    background-size: 140% auto;
+    background-position: 38% 30%;
+  }
+  
+  .informacion::before {
+    width: 90%;
+    left: 5%;
+    height: 420%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(2, 120px);
+    gap: 20%;
+    margin-left: 25%;
+  }
+}
+
+/* iPad en landscape */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  body {
+    background-size: 120% auto;
+    background-position: 32% 50%;
+  }
+  
+  .cards {
+    grid-template-columns: repeat(3, 140px);
+    grid-template-areas: "a b c";
+    margin-left: 20%;
+  }
+  
+  .blue, .green, .red {
+    margin: 0;
+  }
+}

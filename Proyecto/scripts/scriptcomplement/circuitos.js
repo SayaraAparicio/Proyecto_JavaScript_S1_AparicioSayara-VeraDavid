@@ -39,14 +39,27 @@ document.addEventListener('DOMContentLoaded', function () {
             const circuitoCard = document.createElement('div');
             circuitoCard.classList.add('card');
 
+            // Verificar si "temporadas" existe y es un array
+            const temporadas = Array.isArray(circuito.temporadas) ? circuito.temporadas : [];
+
             circuitoCard.innerHTML = `
                 <img class="circuit" src="${circuito.imagen}" alt="${circuito.nombre}">
                 <div class="header">${circuito.nombre}</div>
                 <button class="App-button toggle-button">Mostrar detalles</button>
                 <div class="extra-info" style="display: none; margin-top: 20px; font-weight: normal; font-size: 18px; color: #333;">
-                    <p><strong>Ubicación:</strong> ${circuito.ubicacion}</p>
+                    <p><strong>Ganadores:</strong> ${circuito.ganadores}</p>
                     <p><strong>Longitud:</strong> ${circuito.longitud} km</p>
-                    <p><strong>Vueltas:</strong> ${circuito.vueltas}</p>
+                    <p><strong>Descripción:</strong> ${circuito.descripcion}</p>
+                    <p><strong>Record:</strong> ${circuito.record}</p>
+                    <p><strong>Clima promedio:</strong> ${circuito.clima_promedio}</p>
+                    <p><strong>Desgaste de neumáticos:</strong> ${circuito.desgaste_neumaticos}</p>
+                    <p><strong>Consumo de combustible:</strong> ${circuito.consumo_combustible}</p>
+                    <p><strong>Temporadas:</strong></p>
+                    <ul>
+                        ${temporadas.length > 0 ? temporadas.map(temp => `
+                            <li>${temp.temporada} - ${temp.piloto}</li>
+                        `).join('') : '<li>No hay temporadas disponibles</li>'}
+                    </ul>
                 </div>
             `;
 

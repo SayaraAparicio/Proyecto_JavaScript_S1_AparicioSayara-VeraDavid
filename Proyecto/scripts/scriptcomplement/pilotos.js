@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 <img src="${piloto.imagen}" alt="${piloto.nombre}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
                 <div class="card__content">
                     <h3 class="card__title">${piloto.nombre}</h3>
-                    <p class="card__description"><strong>País:</strong> ${piloto.pais}</p>
-                    <p class="card__description"><strong>Edad:</strong> ${piloto.edad}</p>
+                    <p class="card__description"><strong>Equipo:</strong> ${piloto.equipo}</p>
+                    <p class="card__description"><strong>Rol:</strong> ${piloto.rol}</p>
                 </div>
             `;
 

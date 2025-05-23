@@ -156,7 +156,7 @@
     top: 0;
     left: 5%;
     width: 90%;
-    height: 300%;
+    height: 2000%;
     margin-bottom: 10%;
     margin-top: 7%;
     background-color: white;
@@ -461,175 +461,234 @@
   .profile-card.active .profile-avatar:hover {
     transform: scale(1.1);
   }
-  
-  /* Estilos para las tarjetas de escuderías */
-.equipo-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Contenedor para las filas */
+.content-placeholder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre las cartas */
+  margin-top: 20px;
+  padding: 0 10px;
 }
 
-.equipo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+/* Ajustar el tamaño de las cartas */
+.container {
+  flex: 0 1 calc(45% - 20px); /* Dos cartas por fila */
+  box-sizing: border-box;
+  max-width: 400px;
+  height: auto;
 }
 
-.equipo-logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.equipo-nombre {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5em;
-    color: #e10600; /* Rojo F1 */
-    margin-bottom: 10px;
-}
-
-.equipo-pais,
-.equipo-fundacion,
-.equipo-descripcion {
-    font-family: 'Inter Medio', sans-serif;
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Contenedor de filas */
-.row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-/* Estilos para las tarjetas */
 .card {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    background-color: #f2f2f2;
-    border: 5px solid white; /* Borde blanco */
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra negra */
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    margin: 10px;
+  background-color: #fff;
+  border: 3px solid #E42B1E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: 'Inter';
+  padding: 30px 20px;
+  color: #e23c30;
+  border-radius: 45px;
+  box-shadow: 0 8px 20px black;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  margin-left: 10%;
 }
 
-.card img {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.circuit {
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  max-height: 300px;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Sombra más fuerte al hacer hover */
+.App-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #E42B1E;
+  font-family: 'Inter';
+  font-size: 15px;
+  border: 3px solid #E42B1E;
+  border-radius: 5em;
+  margin-top: 20px;
+  transition: 0.2s;
 }
 
-.card__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.App-button:hover {
+  color: #2e1513;
+  background-color: #E42B1E;
+}
+
+.extra-info p {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.extra-info p strong {
+  color: #e10600; /* Rojo estilo F1 */
+}
+
+.extra-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.extra-info ul li {
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icono de bandera (puedes usar emoji directamente o un icono) */
+.extra-info ul li::before {
+  content: "🏁";
+  font-size: 16px;
+}
+
+/* Contenedor del dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 47%;
+}
+
+/* Botón principal del dropdown */
+.dropdown-button {
+  background-color: #e10600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón principal */
+.dropdown-button:hover {
+  background-color: #920000;
+}
+
+/* Contenido del dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Estilo para los enlaces dentro del dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover para los enlaces */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del dropdown al pasar el mouse */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Botón de eliminar */
+.delete-button {
+  background-color: #e10600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #920000;
+}
+
+#form-container {
+    margin: 20px 0;
     padding: 20px;
-    box-sizing: border-box;
-    background-color: white;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
 }
 
-.card:hover .card__content {
-    transform: rotateX(0deg);
+#form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.card__title {
-    margin: 0;
-    font-size: 24px;
-    color: #333;
-    font-weight: 700;
+#form-container label {
+    font-weight: bold;
 }
 
-.card:hover svg {
-    scale: 0;
+#form-container input,
+#form-container textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.card__description {
-    margin: 10px 0 0;
-    font-size: 14px;
-    color: #777;
-    line-height: 1.4;
+#form-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-container button[type="submit"] {
+    background-color: #e10600;
+    color: white;
+}
+
+#form-container button[type="button"] {
+    background-color: #ccc;
+    color: black;
 }
 
 /* some cards from uiverse.io */
 
-/* ========== MEDIA QUERIES RESPONSIVE ========== */
+/* Media Queries para dispositivos móviles y tablets */
 
-/* Tablets grandes y laptops pequeñas (1024px - 1200px) */
-@media screen and (max-width: 1200px) {
-  .card {
-    width: 280px;
-    margin-left: 5%;
-  }
-  
-  .input {
-    width: 30%;
-    margin-left: 8%;
-  }
-  
-  .icon {
-    left: 9%;
-  }
-  
-  .dropdown {
-    margin-left: 42%;
-  }
-  
-  #form-container {
-    width: 60%;
-    margin-left: 20%;
-  }
-}
-
-/* Tablets (768px - 1024px) */
+/* Tablets y pantallas medianas (768px - 1024px) */
 @media screen and (max-width: 1024px) {
+  /* Header ajustes */
   header {
     padding: 10px 20px;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .nav-links {
-    gap: 12px;
   }
   
   .boton {
-    font-size: 14px;
+    font-size: 13px;
     margin: 0 15px;
   }
   
@@ -638,73 +697,73 @@
     margin: 0 15px;
   }
   
-  .card {
-    width: 250px;
-    height: 180px;
-    margin-left: 0;
+  /* Background ajuste */
+  body {
+    background-size: 150% auto;
+    background-position: 40% 50%;
   }
   
-  .content-placeholder {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 20px;
+  /* Contenido principal */
+  .informacion::before {
+    left: 3%;
+    width: 94%;
   }
   
+  /* Barra de búsqueda y dropdown */
   .input {
     width: 35%;
-    margin-left: 5%;
-  }
-  
-  .icon {
-    left: 6%;
   }
   
   .dropdown {
     margin-left: 35%;
   }
   
+  /* Cartas de circuitos */
+  .content-placeholder {
+    gap: 15px;
+    padding: 0 5px;
+  }
+  
+  .container {
+    flex: 0 1 calc(50% - 15px);
+    max-width: 350px;
+  }
+  
+  .card {
+    margin-left: 5%;
+    padding: 25px 15px;
+    font-size: 24px;
+  }
+  
+  /* Formulario */
   #form-container {
     width: 70%;
     margin-left: 15%;
   }
-  
-  .informacion::before {
-    left: 3%;
-    height: 5000%;
-    width: 94%;
-  }
-  
-  h2 {
-    left: 5%;
-  }
-  
-  p {
-    margin-left: 5%;
-  }
-  
-  .img {
-    margin-left: 10%;
-    max-width: 60%;
-  }
 }
 
-/* Móviles grandes y tablets pequeñas (480px - 768px) */
+/* Tablets pequeñas y móviles grandes (481px - 768px) */
 @media screen and (max-width: 768px) {
+  /* Header para móviles */
   header {
     padding: 8px 15px;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
   }
   
-  .nav-links {
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    align-items: center;
+  #f1logo {
+    height: 25px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
   
   .boton {
-    font-size: 13px;
+    font-size: 12px;
     margin: 5px 10px;
   }
   
@@ -713,119 +772,139 @@
     margin: 5px 10px;
   }
   
-  .content-placeholder {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 15px;
+  /* Profile trigger ajuste */
+  .profile-trigger {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
   }
   
-  .card {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    margin: 0 auto 20px auto;
+  /* Background para móviles */
+  body {
+    background-size: 200% auto;
+    background-position: 50% 30%;
   }
   
-  .card img {
-    width: 100%;
-    height: 200px;
+  /* Contenido principal */
+  .informacion::before {
+    left: 2%;
+    width: 96%;
+    margin-top: 15%;
   }
   
+  h2 {
+    left: 5%;
+    margin-top: 15%;
+    font-size: 1.4em;
+  }
+  
+  /* Barra de búsqueda */
   .input {
     width: 50%;
-    margin-left: 0;
-    margin-top: 20px;
+    margin-left: 5%;
+    height: 35px;
   }
   
   .icon {
-    left: 2%;
-    margin-top: 21px;
+    left: 6%;
   }
   
+  /* Dropdown */
   .dropdown {
-    margin-left: 0;
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
+    margin-left: 20%;
   }
   
   .dropdown-button {
-    width: 50%;
+    padding: 8px 15px;
+    font-size: 14px;
   }
   
+  /* Cartas - una por fila en móviles */
+  .content-placeholder {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .container {
+    flex: 0 1 100%;
+    max-width: 90%;
+  }
+  
+  .card {
+    margin-left: 0;
+    padding: 20px 15px;
+    font-size: 20px;
+    max-width: 100%;
+  }
+  
+  .circuit {
+    max-height: 200px;
+  }
+  
+  .App-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .extra-info {
+    font-size: 16px !important;
+  }
+  
+  .extra-info p {
+    margin-bottom: 8px;
+  }
+  
+  .extra-info ul li {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  /* Formulario para móviles */
   #form-container {
     width: 90%;
     margin-left: 5%;
     padding: 15px;
   }
   
-  .informacion::before {
-    left: 2%;
-    width: 96%;
-    height: 5000%;
-    margin-top: 5%;
+  #form-container input,
+  #form-container textarea {
+    padding: 10px;
+    font-size: 16px; /* Evita zoom en iOS */
   }
   
-  h1 {
-    font-size: 1.4em;
-    padding: 0 15px;
-  }
-  
-  h2 {
-    left: 3%;
-    margin-top: 5%;
-    font-size: 1.3em;
-  }
-  
-  p {
-    margin-left: 3%;
-    font-size: 0.9em;
-  }
-  
-  .img {
-    margin-left: 5%;
-    max-width: 80%;
-  }
-  
-  .profile-trigger {
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    right: 15px;
-  }
-  
+  /* Profile card ajuste */
   .profile-card {
     width: 90%;
     max-width: 280px;
-    height: 320px;
+    height: auto;
+    padding: 1.5rem 1rem;
   }
   
-  .ADDboton {
-    margin-left: 25%;
-    padding: 12px 24px;
+  .profile-name {
+    font-size: 1.3em;
   }
   
-  .group {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 0 15px;
+  .profile-btn {
+    font-size: 0.9em;
+    padding: 0.7em 1em;
   }
 }
 
-/* Móviles pequeños (menos de 480px) */
+/* Móviles pequeños (hasta 480px) */
 @media screen and (max-width: 480px) {
-  body {
-    background-size: 150% auto;
-    background-position: center 30%;
-  }
-  
+  /* Header más compacto */
   header {
     padding: 5px 10px;
   }
   
+  #f1logo {
+    height: 20px;
+  }
+  
   .boton {
-    font-size: 12px;
+    font-size: 10px;
     margin: 3px 5px;
   }
   
@@ -834,105 +913,77 @@
     margin: 3px 5px;
   }
   
-  .card {
-    width: 100%;
-    height: 180px;
-    margin: 0 0 15px 0;
-  }
-  
-  .card img {
-    height: 180px;
-  }
-  
-  .card__content {
-    padding: 15px;
-  }
-  
-  .card__title {
-    font-size: 20px;
-  }
-  
-  .card__description {
-    font-size: 12px;
-  }
-  
-  .input {
-    width: 70%;
+  /* Profile trigger más pequeño */
+  .profile-trigger {
+    width: 35px;
     height: 35px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Background ajuste */
+  body {
+    background-size: 250% auto;
+  }
+  
+  /* Contenido */
+  .informacion::before {
+    left: 1%;
+    width: 98%;
+    margin-top: 20%;
+  }
+  
+  h2 {
+    left: 3%;
+    margin-top: 20%;
+    font-size: 1.2em;
+  }
+  
+  /* Barra de búsqueda más grande */
+  .input {
+    width: 60%;
+    margin-left: 3%;
     font-size: 14px;
   }
   
   .icon {
-    left: 5%;
-    width: 0.8rem;
-    height: 0.8rem;
+    left: 4%;
+  }
+  
+  /* Dropdown centrado */
+  .dropdown {
+    margin-left: 15%;
   }
   
   .dropdown-button {
-    width: 70%;
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 12px;
   }
   
-  .dropdown-content {
-    min-width: 70%;
+  /* Cartas más compactas */
+  .card {
+    padding: 15px 10px;
+    font-size: 18px;
+    border-radius: 25px;
   }
   
-  #form-container {
-    width: 95%;
-    margin-left: 2.5%;
-    padding: 10px;
+  .circuit {
+    max-height: 150px;
+    border-radius: 20px;
   }
   
-  #form-container input {
-    padding: 6px;
-    font-size: 14px;
+  .App-button {
+    padding: 6px 12px;
+    font-size: 12px;
   }
   
-  #form-container button {
-    padding: 8px;
-    font-size: 14px;
+  .extra-info {
+    font-size: 14px !important;
   }
   
-  .informacion::before {
-    left: 1%;
-    width: 98%;
-    margin-top: 3%;
-  }
-  
-  h1 {
-    font-size: 1.2em;
-    padding: 0 10px;
-  }
-  
-  h2 {
-    left: 2%;
-    font-size: 1.2em;
-  }
-  
-  p {
-    margin-left: 2%;
-    font-size: 0.85em;
-  }
-  
-  .img {
-    margin-left: 2%;
-    max-width: 90%;
-  }
-  
-  .profile-card {
-    width: 95%;
-    height: 300px;
-    padding: 1rem;
-  }
-  
-  .profile-name {
-    font-size: 1.3em;
-  }
-  
-  .profile-btn {
-    font-size: 0.7em;
-    padding: 0.7em 1em;
+  .extra-info ul li {
+    padding: 4px 8px;
+    font-size: 12px;
   }
   
   .delete-button {
@@ -940,114 +991,84 @@
     font-size: 12px;
   }
   
-  .ADDboton {
-    margin-left: 15%;
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
-  .group {
-    padding: 0 10px;
-  }
-}
-
-/* Móviles muy pequeños (menos de 320px) */
-@media screen and (max-width: 320px) {
-  .boton {
-    font-size: 11px;
-    margin: 2px 3px;
-  }
-  
-  button {
-    font-size: 13px;
-    margin: 2px 3px;
-  }
-  
-  .card {
-    height: 160px;
-  }
-  
-  .card img {
-    height: 160px;
-  }
-  
-  .card__content {
+  /* Formulario más compacto */
+  #form-container {
+    width: 95%;
+    margin-left: 2.5%;
     padding: 10px;
   }
   
-  .card__title {
-    font-size: 18px;
+  #form-container label {
+    font-size: 14px;
   }
   
-  .card__description {
-    font-size: 11px;
+  #form-container input,
+  #form-container textarea {
+    padding: 8px;
+    font-size: 16px;
   }
   
-  .input {
-    width: 80%;
-    height: 32px;
-    font-size: 13px;
-  }
-  
-  .dropdown-button {
-    width: 80%;
-    padding: 6px 12px;
-    font-size: 13px;
-  }
-  
-  h1 {
-    font-size: 1.1em;
-  }
-  
-  h2 {
-    font-size: 1.1em;
-  }
-  
-  p {
-    font-size: 0.8em;
-  }
-  
-  .profile-card {
-    height: 280px;
-  }
-  
-  .profile-name {
-    font-size: 1.2em;
-  }
-  
-  .profile-btn {
-    font-size: 0.65em;
+  #form-container button {
+    padding: 8px;
+    font-size: 14px;
   }
 }
 
-/* Orientación landscape para móviles */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .profile-card {
-    width: 80%;
-    height: 250px;
-    padding: 1rem;
+/* Pantallas muy pequeñas (hasta 320px) */
+@media screen and (max-width: 320px) {
+  .boton {
+    font-size: 9px;
+    margin: 2px 3px;
   }
   
-  .profile-avatar {
-    --size: 60px;
-    margin-bottom: 1rem;
+  .dropdown {
+    margin-left: 10%;
   }
   
-  .profile-name {
-    font-size: 1.2em;
-    margin-bottom: 0.2rem;
-  }
-  
-  .profile-role {
-    font-size: 0.8em;
-    margin-bottom: 1rem;
+  .dropdown-button {
+    font-size: 11px;
+    padding: 5px 10px;
   }
   
   .card {
-    height: 150px;
+    font-size: 16px;
+    padding: 12px 8px;
   }
   
-  .card img {
-    height: 150px;
+  .circuit {
+    max-height: 120px;
+  }
+  
+  .profile-card {
+    width: 95%;
+    padding: 1rem 0.5rem;
+  }
+  
+  .profile-name {
+    font-size: 1.1em;
+  }
+  
+  .profile-btn {
+    font-size: 0.8em;
+  }
+}
+
+/* Orientación horizontal en móviles */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .informacion::before {
+    margin-top: 25%;
+  }
+  
+  h2 {
+    margin-top: 25%;
+  }
+  
+  .content-placeholder {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    flex: 0 1 calc(50% - 10px);
   }
 }

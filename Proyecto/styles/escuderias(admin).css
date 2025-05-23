@@ -522,6 +522,8 @@
     border: 5px solid white; /* Borde blanco */
     border-radius: 15px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     overflow: hidden;
@@ -529,6 +531,13 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra negra */
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin: 10px;
+    margin-left: 10%;
+}
+.content-placeholder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
 }
 
 .card img {
@@ -566,7 +575,9 @@
 .card:hover .card__content {
     transform: rotateX(0deg);
 }
-
+.section-title {
+  color: #e10600;
+}
 .card__title {
     margin: 0;
     font-size: 24px;
@@ -603,4 +614,586 @@
 }
 .add_boton:hover{
   color: black;
+}
+
+/* Contenedor del dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 47%;
+}
+
+/* Botón principal del dropdown */
+.dropdown-button {
+    background-color: #e10600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para el botón principal */
+.dropdown-button:hover {
+    background-color: #920000;
+}
+
+/* Contenido del dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Estilo para los enlaces dentro del dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover para los enlaces */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el contenido del dropdown al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Botón de eliminar */
+.delete-button {
+    background-color: #e10600;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background-color: #920000;
+}
+
+/* Estilos para el formulario */
+#form-container {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#form-container label {
+    font-weight: bold;
+}
+
+#form-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-container button[type="submit"] {
+    background-color: #e10600;
+    color: white;
+}
+
+#form-container button[type="button"] {
+    background-color: #ccc;
+    color: black;
+}
+
+/* ========== MEDIA QUERIES RESPONSIVE ========== */
+
+/* Tablets grandes y laptops pequeñas (1024px - 1200px) */
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 280px;
+    margin-left: 5%;
+  }
+  
+  .input {
+    width: 30%;
+    margin-left: 8%;
+  }
+  
+  .icon {
+    left: 9%;
+  }
+  
+  .dropdown {
+    margin-left: 42%;
+  }
+  
+  #form-container {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  header {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .nav-links {
+    gap: 12px;
+  }
+  
+  .boton {
+    font-size: 14px;
+    margin: 0 15px;
+  }
+  
+  button {
+    font-size: 18px;
+    margin: 0 15px;
+  }
+  
+  .card {
+    width: 250px;
+    height: 180px;
+    margin-left: 0;
+  }
+  
+  .content-placeholder {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .input {
+    width: 35%;
+    margin-left: 5%;
+  }
+  
+  .icon {
+    left: 6%;
+  }
+  
+  .dropdown {
+    margin-left: 35%;
+  }
+  
+  #form-container {
+    width: 70%;
+    margin-left: 15%;
+  }
+  
+  .informacion::before {
+    left: 3%;
+    width: 94%;
+  }
+  
+  h2 {
+    left: 5%;
+  }
+  
+  p {
+    margin-left: 5%;
+  }
+  
+  .img {
+    margin-left: 10%;
+    max-width: 60%;
+  }
+}
+
+/* Móviles grandes y tablets pequeñas (480px - 768px) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 8px 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .boton {
+    font-size: 13px;
+    margin: 5px 10px;
+  }
+  
+  button {
+    font-size: 16px;
+    margin: 5px 10px;
+  }
+  
+  .content-placeholder {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    margin: 0 auto 20px auto;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .input {
+    width: 50%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .icon {
+    left: 2%;
+    margin-top: 21px;
+  }
+  
+  .dropdown {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .dropdown-button {
+    width: 50%;
+  }
+  
+  #form-container {
+    width: 90%;
+    margin-left: 5%;
+    padding: 15px;
+  }
+  
+  .informacion::before {
+    left: 2%;
+    width: 96%;
+    margin-top: 5%;
+    height: 5000%;
+  }
+  
+  h1 {
+    font-size: 1.4em;
+    padding: 0 15px;
+  }
+  
+  h2 {
+    left: 3%;
+    margin-top: 5%;
+    font-size: 1.3em;
+  }
+  
+  p {
+    margin-left: 3%;
+    font-size: 0.9em;
+  }
+  
+  .img {
+    margin-left: 5%;
+    max-width: 80%;
+  }
+  
+  .profile-trigger {
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 15px;
+  }
+  
+  .profile-card {
+    width: 90%;
+    max-width: 280px;
+    height: 320px;
+  }
+  
+  .ADDboton {
+    margin-left: 25%;
+    padding: 12px 24px;
+  }
+  
+  .group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0 15px;
+  }
+}
+
+/* Móviles pequeños (menos de 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    background-size: 150% auto;
+    background-position: center 30%;
+  }
+  
+  header {
+    padding: 5px 10px;
+  }
+  
+  .boton {
+    font-size: 12px;
+    margin: 3px 5px;
+  }
+  
+  button {
+    font-size: 14px;
+    margin: 3px 5px;
+  }
+  
+  .card {
+    width: 100%;
+    height: 180px;
+    margin: 0 0 15px 0;
+  }
+  
+  .card img {
+    height: 180px;
+  }
+  
+  .card__content {
+    padding: 15px;
+  }
+  
+  .card__title {
+    font-size: 20px;
+  }
+  
+  .card__description {
+    font-size: 12px;
+  }
+  
+  .input {
+    width: 70%;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .icon {
+    left: 5%;
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  
+  .dropdown-button {
+    width: 70%;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .dropdown-content {
+    min-width: 70%;
+  }
+  
+  #form-container {
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 10px;
+  }
+  
+  #form-container input {
+    padding: 6px;
+    font-size: 14px;
+  }
+  
+  #form-container button {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .informacion::before {
+    left: 1%;
+    width: 98%;
+    height: 5000%;
+    margin-top: 3%;
+  }
+  
+  h1 {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
+  
+  h2 {
+    left: 2%;
+    font-size: 1.2em;
+  }
+  
+  p {
+    margin-left: 2%;
+    font-size: 0.85em;
+  }
+  
+  .img {
+    margin-left: 2%;
+    max-width: 90%;
+  }
+  
+  .profile-card {
+    width: 95%;
+    height: 300px;
+    padding: 1rem;
+  }
+  
+  .profile-name {
+    font-size: 1.3em;
+  }
+  
+  .profile-btn {
+    font-size: 0.7em;
+    padding: 0.7em 1em;
+  }
+  
+  .delete-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  .ADDboton {
+    margin-left: 15%;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .group {
+    padding: 0 10px;
+  }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+@media screen and (max-width: 320px) {
+  .boton {
+    font-size: 11px;
+    margin: 2px 3px;
+  }
+  
+  button {
+    font-size: 13px;
+    margin: 2px 3px;
+  }
+  
+  .card {
+    height: 160px;
+  }
+  
+  .card img {
+    height: 160px;
+  }
+  
+  .card__content {
+    padding: 10px;
+  }
+  
+  .card__title {
+    font-size: 18px;
+  }
+  
+  .card__description {
+    font-size: 11px;
+  }
+  
+  .input {
+    width: 80%;
+    height: 32px;
+    font-size: 13px;
+  }
+  
+  .dropdown-button {
+    width: 80%;
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-size: 1.1em;
+  }
+  
+  h2 {
+    font-size: 1.1em;
+  }
+  
+  p {
+    font-size: 0.8em;
+  }
+  
+  .profile-card {
+    height: 280px;
+  }
+  
+  .profile-name {
+    font-size: 1.2em;
+  }
+  
+  .profile-btn {
+    font-size: 0.65em;
+  }
+}
+
+/* Orientación landscape para móviles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .profile-card {
+    width: 80%;
+    height: 250px;
+    padding: 1rem;
+  }
+  
+  .profile-avatar {
+    --size: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-name {
+    font-size: 1.2em;
+    margin-bottom: 0.2rem;
+  }
+  
+  .profile-role {
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+  }
+  
+  .card {
+    height: 150px;
+  }
+  
+  .card img {
+    height: 150px;
+  }
 }

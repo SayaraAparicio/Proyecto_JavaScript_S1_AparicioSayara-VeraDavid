@@ -71,6 +71,7 @@
   .boton:hover {
     transform: translateY(-2px);
     text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+    color: red;
   }
   
   header img {
@@ -155,7 +156,7 @@
     top: 0;
     left: 5%;
     width: 90%;
-    height: 490%;
+    height: 2000%;
     margin-bottom: 10%;
     margin-top: 7%;
     background-color: white;
@@ -521,4 +522,436 @@
 .App-button:hover {
   color: #2e1513;
   background-color: #E42B1E;
+}
+
+.extra-info p {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.extra-info p strong {
+  color: #e10600; /* Rojo estilo F1 */
+}
+
+.extra-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+.extra-info ul li {
+  background-color: #f9f9f9;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Icono de bandera (puedes usar emoji directamente o un icono) */
+.extra-info ul li::before {
+  content: "🏁";
+  font-size: 16px;
+}
+
+/* some cards from uiverse.io */
+
+/* Media Queries para dispositivos móviles y tablets */
+
+/* Tablets y pantallas medianas (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  /* Header ajustes */
+  header {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .boton {
+    font-size: 13px;
+    margin: 0 15px;
+  }
+  
+  button {
+    font-size: 18px;
+    margin: 0 15px;
+  }
+  
+  /* Background ajuste */
+  body {
+    background-size: 150% auto;
+    background-position: 40% 50%;
+  }
+  
+  /* Contenido principal */
+  .informacion::before {
+    left: 3%;
+    width: 94%;
+  }
+  
+  /* Barra de búsqueda y dropdown */
+  .input {
+    width: 35%;
+  }
+  
+  .dropdown {
+    margin-left: 35%;
+  }
+  
+  /* Cartas de circuitos */
+  .content-placeholder {
+    gap: 15px;
+    padding: 0 5px;
+  }
+  
+  .container {
+    flex: 0 1 calc(50% - 15px);
+    max-width: 350px;
+  }
+  
+  .card {
+    margin-left: 5%;
+    padding: 25px 15px;
+    font-size: 24px;
+  }
+  
+  /* Formulario */
+  #form-container {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+/* Tablets pequeñas y móviles grandes (481px - 768px) */
+@media screen and (max-width: 768px) {
+  /* Header para móviles */
+  header {
+    padding: 8px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #f1logo {
+    height: 25px;
+  }
+  
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .boton {
+    font-size: 12px;
+    margin: 5px 10px;
+  }
+  
+  button {
+    font-size: 16px;
+    margin: 5px 10px;
+  }
+  
+  /* Profile trigger ajuste */
+  .profile-trigger {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Background para móviles */
+  body {
+    background-size: 200% auto;
+    background-position: 50% 30%;
+  }
+  
+  /* Contenido principal */
+  .informacion::before {
+    left: 2%;
+    width: 96%;
+    margin-top: 15%;
+  }
+  
+  h2 {
+    left: 5%;
+    margin-top: 15%;
+    font-size: 1.4em;
+  }
+  
+  /* Barra de búsqueda */
+  .input {
+    width: 50%;
+    margin-left: 5%;
+    height: 35px;
+  }
+  
+  .icon {
+    left: 6%;
+  }
+  
+  /* Dropdown */
+  .dropdown {
+    margin-left: 20%;
+  }
+  
+  .dropdown-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+  
+  /* Cartas - una por fila en móviles */
+  .content-placeholder {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .container {
+    flex: 0 1 100%;
+    max-width: 90%;
+  }
+  
+  .card {
+    margin-left: 0;
+    padding: 20px 15px;
+    font-size: 20px;
+    max-width: 100%;
+  }
+  
+  .circuit {
+    max-height: 200px;
+  }
+  
+  .App-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .extra-info {
+    font-size: 16px !important;
+  }
+  
+  .extra-info p {
+    margin-bottom: 8px;
+  }
+  
+  .extra-info ul li {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+  
+  /* Formulario para móviles */
+  #form-container {
+    width: 90%;
+    margin-left: 5%;
+    padding: 15px;
+  }
+  
+  #form-container input,
+  #form-container textarea {
+    padding: 10px;
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+  
+  /* Profile card ajuste */
+  .profile-card {
+    width: 90%;
+    max-width: 280px;
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+  
+  .profile-name {
+    font-size: 1.3em;
+  }
+  
+  .profile-btn {
+    font-size: 0.9em;
+    padding: 0.7em 1em;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media screen and (max-width: 480px) {
+  /* Header más compacto */
+  header {
+    padding: 5px 10px;
+  }
+  
+  #f1logo {
+    height: 20px;
+  }
+  
+  .boton {
+    font-size: 10px;
+    margin: 3px 5px;
+  }
+  
+  button {
+    font-size: 14px;
+    margin: 3px 5px;
+  }
+  
+  /* Profile trigger más pequeño */
+  .profile-trigger {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Background ajuste */
+  body {
+    background-size: 250% auto;
+  }
+  
+  /* Contenido */
+  .informacion::before {
+    left: 1%;
+    width: 98%;
+    margin-top: 20%;
+  }
+  
+  h2 {
+    left: 3%;
+    margin-top: 20%;
+    font-size: 1.2em;
+  }
+  
+  /* Barra de búsqueda más grande */
+  .input {
+    width: 60%;
+    margin-left: 3%;
+    font-size: 14px;
+  }
+  
+  .icon {
+    left: 4%;
+  }
+  
+  /* Dropdown centrado */
+  .dropdown {
+    margin-left: 15%;
+  }
+  
+  .dropdown-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  /* Cartas más compactas */
+  .card {
+    padding: 15px 10px;
+    font-size: 18px;
+    border-radius: 25px;
+  }
+  
+  .circuit {
+    max-height: 150px;
+    border-radius: 20px;
+  }
+  
+  .App-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .extra-info {
+    font-size: 14px !important;
+  }
+  
+  .extra-info ul li {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  
+  .delete-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  
+  /* Formulario más compacto */
+  #form-container {
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 10px;
+  }
+  
+  #form-container label {
+    font-size: 14px;
+  }
+  
+  #form-container input,
+  #form-container textarea {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  #form-container button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 320px) */
+@media screen and (max-width: 320px) {
+  .boton {
+    font-size: 9px;
+    margin: 2px 3px;
+  }
+  
+  .dropdown {
+    margin-left: 10%;
+  }
+  
+  .dropdown-button {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .card {
+    font-size: 16px;
+    padding: 12px 8px;
+  }
+  
+  .circuit {
+    max-height: 120px;
+  }
+  
+  .profile-card {
+    width: 95%;
+    padding: 1rem 0.5rem;
+  }
+  
+  .profile-name {
+    font-size: 1.1em;
+  }
+  
+  .profile-btn {
+    font-size: 0.8em;
+  }
+}
+
+/* Orientación horizontal en móviles */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .informacion::before {
+    margin-top: 25%;
+  }
+  
+  h2 {
+    margin-top: 25%;
+  }
+  
+  .content-placeholder {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    flex: 0 1 calc(50% - 10px);
+  }
 }
