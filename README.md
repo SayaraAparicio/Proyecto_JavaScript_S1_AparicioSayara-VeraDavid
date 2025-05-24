@@ -14,7 +14,7 @@
 
 # 🏁 Formula 1 - PAGE
 
-[Ver página Formula 1](http://127.0.0.1:5500/Proyecto/index.html)
+[Ver página Formula 1](https://sayaraaparicio.github.io/Proyecto_JavaScript_S1_AparicioSayara-VeraDavid/Proyecto/)
 
 [Ver maquetación](https://www.figma.com/design/zVhSwlsvLlDaiMYCVKrZty/F1?node-id=0-1&t=QEXcPGBikCLhXw2N-1)
 
